@@ -10,45 +10,45 @@ locationX,locationY = eval(input("Please enter a x and y coordinate for the cent
 radiusCenter = eval(input("Please enter a radius for the center of the target: "))
 
 locationCenterX = locationX
-biggestRadius = radiusCenter + 75
-locationCenterY = locationY - biggestRadius
+locationCenterY = locationY - radiusCenter
+biggerRadius = 25
 
 target.penup()
 target.goto(locationCenterX,locationCenterY)
 target.pendown()
-target.color("black")
+target.color("yellow")
 target.begin_fill()
-target.circle(biggestRadius)
+target.circle(radiusCenter)
 target.end_fill()
 
-biggestRadius -= 25
-locationCenterY += 25
-target.penup()
-target.goto(locationCenterX,locationCenterY)
-target.pendown()
-target.color("blue")
-target.begin_fill()
-target.circle(biggestRadius)
-target.end_fill()
-
-biggestRadius -= 25
-locationCenterY += 25
+locationCenterY -= biggerRadius
+radiusCenter += biggerRadius
 target.penup()
 target.goto(locationCenterX,locationCenterY)
 target.pendown()
 target.color("red")
 target.begin_fill()
-target.circle(biggestRadius)
+target.circle(radiusCenter)
 target.end_fill()
 
-biggestRadius -= 25
-locationCenterY += 25
-target.color("yellow")
+locationCenterY -= biggerRadius
+radiusCenter += biggerRadius
+target.penup()
+target.goto(locationCenterX,locationCenterY)
+target.pendown()
+target.color("blue")
+target.begin_fill()
+target.circle(radiusCenter)
+target.end_fill()
+
+locationCenterY -= biggerRadius
+radiusCenter += biggerRadius
+target.color("black")
 target.penup()
 target.goto(locationCenterX,locationCenterY)
 target.pendown()
 target.begin_fill()
-target.circle(biggestRadius)
+target.circle(radiusCenter)
 target.end_fill()
 
 
